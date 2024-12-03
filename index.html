@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+
+    <meta charset="UTF-8">
+    <title>Gyani_Bro</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .telegram-link {
+            background-color: #0088cc;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .jwplayer {
+            position: absolute !important;
+            top: 50px; /* Adjust to fit below the Telegram link */
+            width: 100%;
+            height: calc(100% - 50px); /* Adjust to fit below the Telegram link */
+        }
+
+        .jwplayer.jw-flag-aspect-mode {
+            min-height: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Telegram link -->
+    <div class="telegram-link">
+        <a href="https://t.me/Gyani_Bro" target="_blank" style="color: white; text-decoration: none;">Join us on Telegram</a>
+    </div>
+    
+    <!-- JWPlayer -->
+    <div id="jwplayerDiv"></div>
+
+    <script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
+    <script type="text/javascript">
+       var config = {
+    "file": "https://s3.ap-south-1.amazonaws.com/byjus-media-delivery/videos/mpkgr-production-ffe17992/qqlfgi/dash/h264.mpd",
+    "drm": {
+        "widevine": {
+            "license": "https://drm.tllms.com/widevine/license/JjCpWETFO3DztMtyqETmFw"
+        }
+    }
+};
+        jwplayer("jwplayerDiv").setup({
+            file: "https://s3.ap-south-1.amazonaws.com/byjus-media-delivery/videos/mpkgr-production-ffe17992/qqlfgi/dash/h264.mpd",
+            position: 'bottom',
+            autostart: true,
+            stretching: "",
+            width: "100%",
+            type: "dash",
+         
+          
+        });
+    </script>
+</body>
+</html>
