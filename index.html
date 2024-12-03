@@ -1,9 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
-
     <meta charset="UTF-8">
     <title>Gyani_Bro</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,24 +44,17 @@
 
     <script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
     <script type="text/javascript">
-       var config = {
-    "file": "https://s3.ap-south-1.amazonaws.com/byjus-media-delivery/videos/mpkgr-production-ffe17992/qqlfgi/dash/h264.mpd",
-    "drm": {
-        "widevine": {
-            "license": "https://drm.tllms.com/widevine/license/JjCpWETFO3DztMtyqETmFw"
-        }
-    }
-};
-        jwplayer("jwplayerDiv").setup({
-            file: "https://s3.ap-south-1.amazonaws.com/byjus-media-delivery/videos/mpkgr-production-ffe17992/qqlfgi/dash/h264.mpd",
-            position: 'bottom',
-            autostart: true,
-            stretching: "",
-            width: "100%",
-            type: "dash",
-         
-          
-        });
+        var config = {
+            "file": "https://s3.ap-south-1.amazonaws.com/byjus-media-delivery/videos/mpkgr-production-ffe17992/qqlfgi/dash/h264.mpd",
+            "drm": {
+                "widevine": {
+                    "url": "https://drm.tllms.com/widevine/license/JjCpWETFO3DztMtyqETmFw"
+                }
+            }
+        };
+
+        var playerInstance = jwplayer("jwplayerDiv");
+        playerInstance.setup(config);
     </script>
 </body>
 </html>
